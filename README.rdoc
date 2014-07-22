@@ -1,3 +1,0 @@
-= company
-
-Description goes here
