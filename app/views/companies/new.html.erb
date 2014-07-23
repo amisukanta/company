@@ -1,6 +1,6 @@
 <h1>Sign up Company</h1>
 
-<div class="row">
+<%= error_messages_for 'company' %>
   <div>
     <%= form_for(@company) do |f| %>
 
@@ -10,7 +10,7 @@
       <%= f.label :email %>
       <%= f.text_field :email %>
 
-      <%= f.label :description, :rows => 5 %>
+      <%= f.label :description, :rows => 3 %>
       <%= f.text_area :description %>
 
       <%= f.label :contact_no %>
@@ -18,5 +18,5 @@
 
       <%= f.submit "Create account", class: "btn btn-large btn-primary" %>
     <% end %>
-  </div>
+  
 </div>
