@@ -1,8 +1,18 @@
+
 <h2>Compnay List</h2>
 <div>
 <ul>
-<% @companies.each do |c| %>
-<li><%= c.name %></li>
+<% @companies.each do |company| %>
+<li><%= company.name %></li>
+<li><%= link_to 'Show', company %></li>
+<li><%= link_to 'Edit', edit_company_path(company) %></li>
+<li><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></li>
 <% end%>
 </ul>
+</div>
+
+<div>
+	<%= link_to "Create Compnay", sign_up_path %>
+	
+
 </div>

@@ -1,6 +1,7 @@
 class Company < ActiveRecord::Base
   unloadable
   # ensure email address in the database is downcase
+  mount_uploader :avatar, AvatarUploader
   before_save :downcase_email
    # validates the presence of data and length of name , format of email
   validates :name, presence: true, length: {maximum: 60}
